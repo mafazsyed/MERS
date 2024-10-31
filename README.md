@@ -132,7 +132,7 @@ where:
 - \( w_{\text{face}}, w_{\text{text}}, w_{\text{speech}} \): Weights assigned to the face, text, and speech modalities.
 - \( n_i \): Emotion-specific multiplier adjusting the influence of the speech emotion score to map the four emotion classes in speech recognition to the seven classes used in face and text models.
 
-<img src="https://github.com/user-attachments/assets/d29567af-a0c5-45e8-86bb-3590314bfd9d" alt="weights" width="50%">
+<img src="https://github.com/user-attachments/assets/d29567af-a0c5-45e8-86bb-3590314bfd9d" alt="weights" width="60%">
 
 ![combined_emotion_flowchart](https://github.com/user-attachments/assets/1fcfe54d-5ffe-4bde-8918-08e8075ff11d)
 
