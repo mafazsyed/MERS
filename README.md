@@ -2,25 +2,21 @@
 
 This repository contains the code and resources developed as part of the thesis project *Multimodal Emotion and Physiological State Recognition for Humanoid Robots*. The project aims to advance human-robot interaction (HRI) through real-time emotion and physiological state recognition using multimodal data.
 
+## Abstract
+This project develops an emotion recognition system that leverages facial expressions, speech inputs, and textual content alongside remotely detecting physiological indicators like heart rate through contactless facial camera footage. Through the development, training, and testing of Facial Emotion Recognition (FER) models and Text Emotion Recognition (TER) techniques using established datasets, the project seeks to enhance and compare the accuracy and generalization capabilities of these models. Part of the emotion recognition system is integrated into the JD Humanoid Robot to demonstrate its practical applications in enhancing human-robot interaction.
+
+### Video Preview
 <div style="display: flex; justify-content: space-around;">
 
   <a href="https://mafazsyed.com/wp-content/uploads/2024/10/MERS-FER-Interstellar-Scene.mp4">
-    <img src="https://github.com/user-attachments/assets/743fe3f5-3021-4fd3-85ae-159b96d60668" width="48%" />
+    <img src="https://github.com/user-attachments/assets/743fe3f5-3021-4fd3-85ae-159b96d60668" width="40%" />
   </a>
 
   <a href="https://mafazsyed.com/wp-content/uploads/2024/10/rPPG-Subject-3-UBFC-rPPG-Dataset-2.mp4">
-    <img src="https://github.com/user-attachments/assets/893d3202-f4d3-49a2-a297-4831f37cdd9e" width="48%" />
+    <img src="https://github.com/user-attachments/assets/893d3202-f4d3-49a2-a297-4831f37cdd9e" width="40%" />
   </a>
 
 </div>
-
-[![Watch the video](https://github.com/user-attachments/assets/743fe3f5-3021-4fd3-85ae-159b96d60668)](https://mafazsyed.com/wp-content/uploads/2024/10/MERS-FER-Interstellar-Scene.mp4)
-
-[![Watch the video](https://github.com/user-attachments/assets/893d3202-f4d3-49a2-a297-4831f37cdd9e)](https://mafazsyed.com/wp-content/uploads/2024/10/rPPG-Subject-3-UBFC-rPPG-Dataset-2.mp4)
-
-## Abstract
-
-This project develops an emotion recognition system that leverages facial expressions, speech inputs, and textual content alongside remotely detecting physiological indicators like heart rate through contactless facial camera footage. Through the development, training, and testing of Facial Emotion Recognition (FER) models and Text Emotion Recognition (TER) techniques using established datasets, the project seeks to enhance and compare the accuracy and generalization capabilities of these models. Part of the emotion recognition system is integrated into the JD Humanoid Robot to demonstrate its practical applications in enhancing human-robot interaction.
 
 ### Key Contributions
 - **Facial Emotion Recognition (FER)**: Using CNN and MobileNetFER13 models trained on the FER2013 dataset.
