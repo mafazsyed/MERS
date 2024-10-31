@@ -27,14 +27,20 @@ Each developed model can be trained individually using the notebooks in `/notebo
 
 ### Face Emotion Recognition
 #### Baseline FER
-The baseline FER CNN model was trained on the [FER2013 dataset](https://www.kaggle.com/datasets/msambare/fer2013).
+The baseline FER CNN model was trained on the [FER2013 dataset](https://www.kaggle.com/datasets/msambare/fer2013). The model consists of five convolutional layers with increasing filter sizes (32, 64, 128, and 256), each followed by batch normalization for improved training stability. Max-pooling layers are applied after certain convolutional blocks to reduce spatial dimensions, and dropout layers are included to prevent overfitting. Two fully connected layers are used, with the final dense layer comprising seven neurons and a softmax activation function, corresponding to the seven emotion classes.
 
+Model trained using `Baseline_FER_CNN.ipynb`.
 
 #### MobileNet-FER13
+The base architecture of MobileNet was used with pre-trained weights from ImageNet. The model was trained on the [cleaned version of the FER2013 dataset](https://www.kaggle.com/datasets/gauravsharma99/fer13-cleaned-dataset), which removed inconsistencies and included five emotion classes: 'Angry, Fear, Happy, Disgust, and Neutral'.
 
-Train using `Baseline_FER_CNN.ipynb` and `MobileNet-FER13.ipynb`.
+Model trained using `MobileNet-FER13.ipynb`.
 
-- **TER**: Train using `TER_LSTM.ipynb`.
+### Text Emotion Recognition
+#### LSTM-GoEmotions
+For text emotion recognition, a Long Short-Term Memory (LSTM) model was chosen due to its ability to capture long-range dependencies in sequential data like text, while remaining computationally efficient compared to more complex models like BERT. The model was trained using the [GoEmotions dataset](https://www.kaggle.com/datasets/debarshichanda/goemotions).
+
+Model trained using `TER_LSTM.ipynb`.
 
 ## Pre-Trained Models
 
@@ -42,6 +48,30 @@ Train using `Baseline_FER_CNN.ipynb` and `MobileNet-FER13.ipynb`.
 MERS combines pre-trained FER, TER, and SER models—[DeepFace](https://pypi.org/project/deepface/0.0.24/), [EkmanClassifier](https://huggingface.co/arpanghoshal/EkmanClassifier), and [Hubert-Large](https://huggingface.co/superb/hubert-large-superb-er), respectively—using a late fusion model. The late fusion model uses a weighted emotion and modal aggregation method to produce a final `aggregated_emotion`.
 
 ![fusion_model_mers](https://github.com/user-attachments/assets/3eabc7a8-ccfe-48c2-9b41-31f8fcb2f992)
+
+#### Combined Emotion Aggregation Equation
+
+The combined emotion score \( E_i \) is calculated as:
+
+\[
+E_i = (w_{\text{face}} \times F_i) + (w_{\text{text}} \times T_i) + (n_i \times w_{\text{speech}} \times S_i)
+\]
+
+where:
+
+\[
+i \in \{0, 1, 2, 3, 4, 5, 6\} \quad \text{with} \quad 0 = \text{Angry}, \quad 1 = \text{Disgust}, \quad 2 = \text{Fear}, \quad 3 = \text{Happy}, \quad 4 = \text{Sad}, \quad 5 = \text{Surprise}, \quad 6 = \text{Neutral}
+\]
+
+\[
+j \in \{0, 1, 2, 3\} \quad \text{with} \quad 0 = \text{Neutral}, \quad 1 = \text{Happy}, \quad 2 = \text{Angry}, \quad 3 = \text{Sad}
+\]
+
+##### Parameters
+- \( E_i \): Combined score for the \( i \)th emotion.
+- \( F_i \), \( T_i \), and \( S_i \): Emotion scores from face, text, and speech recognition models for the \( i \)th emotion.
+- \( w_{\text{face}}, w_{\text{text}}, w_{\text{speech}} \): Weights assigned to the face, text, and speech modalities.
+- \( n_i \): Emotion-specific multiplier adjusting the influence of the speech emotion score to map the four emotion classes in speech recognition to the seven classes used in face and text models.
 
 ![combined_emotion_flowchart](https://github.com/user-attachments/assets/1fcfe54d-5ffe-4bde-8918-08e8075ff11d)
 
