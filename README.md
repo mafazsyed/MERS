@@ -2,12 +2,7 @@
 
 This repository contains the code and resources developed as part of the thesis project *Multimodal Emotion and Physiological State Recognition for Humanoid Robots*. The project aims to advance human-robot interaction (HRI) through real-time emotion and physiological state recognition using multimodal data.
 
-<video width="640" height="360" controls>
-  <source src="https://mafazsyed.com/wp-content/uploads/2024/10/MERS-FER-Interstellar-Scene.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-
-![Preview](https://mafazsyed.com/wp-content/uploads/2024/10/MERS-FER-Interstellar-Scene.mp4)
+[![Watch the video](https://mafazsyed.com/wp-content/uploads/2024/10/MERS-FER-Interstellar-Scene.mp4)
 
 ## Abstract
 
