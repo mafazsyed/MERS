@@ -14,7 +14,7 @@ This thesis introduces a **Multimodal Emotion Recognition System (MERS)** for hu
 
 While each model showed promising accuracy, further work is needed for underrepresented emotion classes and expanded dataset validation. Future development can enhance MERS's applicability in healthcare, education, and social robotics, potentially transforming human-robot interaction in real-time applications.
 
-## Project Structure
+## Repository Structure
 - **/src**: Source code for FER, TER, and rPPG models.
 - **/models**: Pre-trained model weights for FER, TER, and rPPG (FER CNN, MobileNetFER13, and LSTM for TER).
 - **/docs**: Project documentation, including system design, model architecture, and evaluation.
@@ -146,7 +146,12 @@ This project includes an enhanced version of an existing [rPPG model](https://gi
 | Bandpass Filtering              | 1.0–2.0 Hz filter isolates heart rate (60–120 BPM) while reducing noise and motion artefacts.              |
 | Real-Time Visualization         | Displays detected face ROI and heart rate in real-time with historical annotations.                        |
 
-### Deploying on JD Humanoid Robot
+The model was tested on 'subject 3' of [UBFC-rPPG Dataset 2](https://sites.google.com/view/ybenezeth/ubfcrppg).
+
+#### Enhanced Model Performance
+![rPPG Model Validation Graph](https://github.com/user-attachments/assets/62f0fd6d-f63b-4cc7-a79c-3903c7fe5c47)
+
+### Integration with JD Humanoid Robot
 
 The `jd_humanoid_integration.EZB` file integrates:
 - **Text Sentiment Analysis** using the VADER Sentiment Analysis module.
