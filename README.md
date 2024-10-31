@@ -22,17 +22,24 @@ While each model showed promising accuracy, further work is needed for underrepr
 - **/notebooks**: Jupyter notebooks for model training and testing.
 - **/robot_integration**: Scripts for deploying emotion recognition on the JD Humanoid Robot for real-time, personalized feedback.
 
-## Usage
-
-### Training Models
+## Training Models
 Each developed model can be trained individually using the notebooks in `/notebooks`:
 
-- **FER**: Train using `Baseline_FER_CNN.ipynb` and `MobileNet-FER13.ipynb`.
+### Face Emotion Recognition
+#### Baseline FER
+The baseline FER CNN model was trained on the [FER2013 dataset](https://www.kaggle.com/datasets/msambare/fer2013).
+
+
+#### MobileNet-FER13
+
+Train using `Baseline_FER_CNN.ipynb` and `MobileNet-FER13.ipynb`.
+
 - **TER**: Train using `TER_LSTM.ipynb`.
 
-### Pre-Trained Models
+## Pre-Trained Models
 
-- **Multimodal Emotion Recognition System (MERS)**: MERS combines pre-trained FER, TER, and SER models—[DeepFace](https://pypi.org/project/deepface/0.0.24/), [EkmanClassifier](https://huggingface.co/arpanghoshal/EkmanClassifier), and [Hubert-Large](https://huggingface.co/superb/hubert-large-superb-er), respectively—using a late fusion model. The late fusion model uses a weighted emotion and modal aggregation method to produce a final `aggregated_emotion`.
+### Multimodal Emotion Recognition System (MERS)
+MERS combines pre-trained FER, TER, and SER models—[DeepFace](https://pypi.org/project/deepface/0.0.24/), [EkmanClassifier](https://huggingface.co/arpanghoshal/EkmanClassifier), and [Hubert-Large](https://huggingface.co/superb/hubert-large-superb-er), respectively—using a late fusion model. The late fusion model uses a weighted emotion and modal aggregation method to produce a final `aggregated_emotion`.
 
 ![fusion_model_mers](https://github.com/user-attachments/assets/3eabc7a8-ccfe-48c2-9b41-31f8fcb2f992)
 
@@ -46,7 +53,8 @@ Each developed model can be trained individually using the notebooks in `/notebo
   - Temporal analysis (time-based analysis of emotions)
   - Emotion transition matrix
   
-- **Remote Photoplethysmography (rPPG)**: This project includes an enhanced version of an existing [rPPG model](https://github.com/giladoved/webcam-heart-rate-monitor) based on [Eulerian Video Magnification](https://people.csail.mit.edu/mrub/papers/vidmag.pdf). Run it via `rppg_heartrate_enhanced.py` to estimate heart rate.
+### Remote Photoplethysmography (rPPG)
+This project includes an enhanced version of an existing [rPPG model](https://github.com/giladoved/webcam-heart-rate-monitor) based on [Eulerian Video Magnification](https://people.csail.mit.edu/mrub/papers/vidmag.pdf). Run it via `rppg_heartrate_enhanced.py` to estimate heart rate.
 
 ![rppg_flowchart](https://github.com/user-attachments/assets/6056d2e4-a6da-468b-aa85-4b9832e28f2c)
 
