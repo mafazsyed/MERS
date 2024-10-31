@@ -193,3 +193,14 @@ Other modules, such as RGB Animator, were used for enhanced and further tailored
 - **rPPG Heart Rate Detection**:
   - Validating the model using all subjects of the UBFC-rPPG dataset.
   - Face skin segmentation, such as Skin-SegNet, instead of traditional face detection; use of deep learning-based rPPG methods.
+
+## Citation
+If you find this work useful, please cite (note that this is unpublished work):
+
+```bibtex
+@misc{MafazThesis2024,
+  author = {Mafaz Syed},
+  title = {Multimodal Emotion and Physiological State Recognition for Humanoid Robots},
+  year = {2024},
+  note = {Unpublished thesis, The University of Sheffield}
+}
