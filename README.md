@@ -4,12 +4,13 @@ This repository contains the code and resources developed as part of the thesis 
 
 ## Abstract
 
-This thesis introduces a **Multimodal Emotion Recognition System (MERS)** for humanoid robots, combining **Facial, Text, and Speech Emotion Recognition** to enable robust, contactless emotion monitoring. By unifying emotion labels and applying weighted emotion aggregation, MERS achieves adaptability for resource-constrained, real-time applications.
+This project develops an emotion recognition system that leverages facial expressions, speech inputs, and textual content alongside remotely detecting physiological indicators like heart rate through contactless facial camera footage. Through the development, training, and testing of Facial Emotion Recognition (FER) models and Text Emotion Recognition (TER) techniques using established datasets, the project seeks to enhance and compare the accuracy and generalization capabilities of these models. Part of the emotion recognition system is integrated into the JD Humanoid Robot to demonstrate its practical applications in enhancing human-robot interaction.
 
 ### Key Contributions
 - **Facial Emotion Recognition (FER)**: Using CNN and MobileNetFER13 models trained on the FER2013 dataset.
 - **Text Emotion Recognition (TER)**: An LSTM-based model trained on GoEmotions for nuanced text emotion analysis.
 - **Text Sentiment Analysis Integration**: Facilitates dynamic feedback in the JD Humanoid Robot based on detected user emotions.
+- **Multimodal Emotion Recognition System (MERS)**: Aggregation of facial, text, and speech recognition via a late fusion model to enable real-time, contactless emotion monitoring with emotion logging, visualisation, and analysis.
 - **Remote Photoplethysmography (rPPG)**: An Eulerian Video Magnification-based model estimates heart rate in a contactless manner.
 
 While each model showed promising accuracy, further work is needed for underrepresented emotion classes and expanded dataset validation. Future development can enhance MERS's applicability in healthcare, education, and social robotics, potentially transforming human-robot interaction in real-time applications.
