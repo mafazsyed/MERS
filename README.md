@@ -140,7 +140,11 @@ where:
   
   Run `MERS_Final.py` to observe multimodal emotion analysis in action. Emotions are logged to a `.log` file, enabling further emotional analysis.
 
-- **Emotional Analysis**: The `emotion_analysis` folder contains scripts and examples for emotional analysis, including:
+#### Result
+![mers_preview](https://github.com/user-attachments/assets/f54e6584-2fe2-4757-95b6-0e86ac2020a2)
+
+#### Emotional Analysis
+The `emotion_analysis` folder contains scripts and examples for emotional analysis, including:
   - Emotion distribution graphs (bar and pie charts)
   - Temporal analysis (time-based analysis of emotions)
   - Emotion transition matrix
