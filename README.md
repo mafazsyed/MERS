@@ -32,7 +32,7 @@ Each developed model can be trained individually using the notebooks in `/notebo
 
 ### Pre-Trained Models
 
-- **Multimodal Emotion Recognition System (MERS)**: MERS combines pre-trained FER, TER, and SER models—DeepFace, EkmanClassifier, and Hubert-Large, respectively—using a late fusion model. The late fusion model uses a weighted emotion and modal aggregation method to produce a final `aggregated_emotion`.
+- **Multimodal Emotion Recognition System (MERS)**: MERS combines pre-trained FER, TER, and SER models—[DeepFace](https://pypi.org/project/deepface/0.0.24/), [EkmanClassifier](https://huggingface.co/arpanghoshal/EkmanClassifier), and [Hubert-Large](https://huggingface.co/superb/hubert-large-superb-er), respectively—using a late fusion model. The late fusion model uses a weighted emotion and modal aggregation method to produce a final `aggregated_emotion`.
 
   ![MERS Model Diagram](/path/to/image)
   
@@ -43,12 +43,16 @@ Each developed model can be trained individually using the notebooks in `/notebo
   - Temporal analysis (time-based analysis of emotions)
   - Emotion transition matrix
   
-- **Remote Photoplethysmography (rPPG)**: This project includes an enhanced version of an existing rPPG model based on Eulerian Video Magnification. Run it via `rppg_heartrate_enhanced.py` to estimate heart rate. 
+- **Remote Photoplethysmography (rPPG)**: This project includes an enhanced version of an existing [rPPG model](https://github.com/giladoved/webcam-heart-rate-monitor) based on [Eulerian Video Magnification](https://people.csail.mit.edu/mrub/papers/vidmag.pdf). Run it via `rppg_heartrate_enhanced.py` to estimate heart rate.
 
-  | Enhancement | Description |
-  | ----------- | ----------- |
-  | [Add enhancement 1] | Description 1 |
-  | [Add enhancement 2] | Description 2 |
+| Enhancement                     | Description                                                                                                 |
+|---------------------------------|-------------------------------------------------------------------------------------------------------------|
+| Face Detection                  | Uses OpenCV’s Haar Cascade for dynamic face region detection instead of a fixed window.                    |
+| Webcam Resolution & Frame Rate  | Set to 640x480 pixels at 30 fps for higher data accuracy.                                                  |
+| Gaussian Pyramid Construction   | Reduced from 3 to 2 levels for faster processing; face region resized to 160x120 pixels.                   |
+| Heart Rate Calculation Frequency| Calculated every 30 frames with a 20 BPM buffer to smooth fluctuations.                                    |
+| Bandpass Filtering              | 1.0–2.0 Hz filter isolates heart rate (60–120 BPM) while reducing noise and motion artefacts.              |
+| Real-Time Visualization         | Displays detected face ROI and heart rate in real-time with historical annotations.                        |
 
 ### Deploying on JD Humanoid Robot
 
