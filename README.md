@@ -148,7 +148,7 @@ This project includes an enhanced version of an existing [rPPG model](https://gi
 
 The model was tested on 'subject 3' of [UBFC-rPPG Dataset 2](https://sites.google.com/view/ybenezeth/ubfcrppg).
 
-#### Enhanced Model Performance
+#### Model Performance on Subject 3
 ![rPPG Model Validation Graph](https://github.com/user-attachments/assets/62f0fd6d-f63b-4cc7-a79c-3903c7fe5c47)
 
 ### Integration with JD Humanoid Robot
