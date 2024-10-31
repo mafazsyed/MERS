@@ -53,25 +53,22 @@ MERS combines pre-trained FER, TER, and SER models—[DeepFace](https://pypi.org
 
 The combined emotion score \( E_i \) is calculated as:
 
-\[
-E_i = (w_{\text{face}} \times F_i) + (w_{\text{text}} \times T_i) + (n_i \times w_{\text{speech}} \times S_i)
-\]
+![CodeCogsEqn](https://github.com/user-attachments/assets/ce65b40a-c056-4818-8fa0-cda86d77bc5e)
 
 where:
 
-\[
-i \in \{0, 1, 2, 3, 4, 5, 6\} \quad \text{with} \quad 0 = \text{Angry}, \quad 1 = \text{Disgust}, \quad 2 = \text{Fear}, \quad 3 = \text{Happy}, \quad 4 = \text{Sad}, \quad 5 = \text{Surprise}, \quad 6 = \text{Neutral}
-\]
+![CodeCogsEqn (1)](https://github.com/user-attachments/assets/5a94e679-9fd0-406e-84fc-221b0b4f5cae)
 
-\[
-j \in \{0, 1, 2, 3\} \quad \text{with} \quad 0 = \text{Neutral}, \quad 1 = \text{Happy}, \quad 2 = \text{Angry}, \quad 3 = \text{Sad}
-\]
+![CodeCogsEqn (2)](https://github.com/user-attachments/assets/60991a6d-fb06-40d9-9620-d610021ce128)
 
 ##### Parameters
 - \( E_i \): Combined score for the \( i \)th emotion.
 - \( F_i \), \( T_i \), and \( S_i \): Emotion scores from face, text, and speech recognition models for the \( i \)th emotion.
 - \( w_{\text{face}}, w_{\text{text}}, w_{\text{speech}} \): Weights assigned to the face, text, and speech modalities.
 - \( n_i \): Emotion-specific multiplier adjusting the influence of the speech emotion score to map the four emotion classes in speech recognition to the seven classes used in face and text models.
+
+
+
 
 ![combined_emotion_flowchart](https://github.com/user-attachments/assets/1fcfe54d-5ffe-4bde-8918-08e8075ff11d)
 
