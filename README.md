@@ -57,7 +57,8 @@ The `jd_humanoid_integration.EZB` file integrates:
 - **Speech Recognition and Speech-to-Text** via the Bing Speech Recognition module, with auto wake-up functionality.
 - **Visual Input Analysis** from the robot’s camera using the Microsoft Cognitive Vision module.
 - **OpenAI GPT-4 Module** to generate tailored responses based on speech, vision, and sentiment.
-- **RGB Animator and Other Modules** for enhanced, tailored feedback based on text sentiment analysis.
+
+Other modules, such as RGB Animator, were used for enhanced and further tailored feedback based on text sentiment analysis results.
 
 ![Process Flowchart](/path/to/flowchart)
 
