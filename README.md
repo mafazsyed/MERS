@@ -26,21 +26,73 @@ While each model showed promising accuracy, further work is needed for underrepr
 Each developed model can be trained individually using the notebooks in `/notebooks`:
 
 ### Face Emotion Recognition
-#### Baseline FER
+#### Baseline FER CNN Model
 The baseline FER CNN model was trained on the [FER2013 dataset](https://www.kaggle.com/datasets/msambare/fer2013). The model consists of five convolutional layers with increasing filter sizes (32, 64, 128, and 256), each followed by batch normalization for improved training stability. Max-pooling layers are applied after certain convolutional blocks to reduce spatial dimensions, and dropout layers are included to prevent overfitting. Two fully connected layers are used, with the final dense layer comprising seven neurons and a softmax activation function, corresponding to the seven emotion classes.
 
 Model trained using `Baseline_FER_CNN.ipynb`.
+
+##### Results
+![fer](https://github.com/user-attachments/assets/52fb3fc4-e60d-43dc-b04e-e102bb59f041)
+
+| **Class**   | **Precision** | **Recall** | **F1-Score** | **Support** |
+|-------------|---------------|------------|--------------|-------------|
+| 0 (Angry)   | 0.58          | 0.57       | 0.58         | 958         |
+| 1 (Disgust) | 0.69          | 0.41       | 0.52         | 111         |
+| 2 (Fear)    | 0.52          | 0.36       | 0.43         | 1024        |
+| 3 (Happy)   | 0.85          | 0.86       | 0.85         | 1774        |
+| 4 (Sad)     | 0.53          | 0.48       | 0.50         | 1247        |
+| 5 (Surprise)| 0.76          | 0.78       | 0.77         | 831         |
+| 6 (Neutral) | 0.53          | 0.72       | 0.61         | 1233        |
+| **Macro Avg**   | 0.64          | 0.60       | 0.61         | -           |
+| **Weighted Avg**| 0.64          | 0.65       | 0.64         | -           |
+| **Accuracy**    | -             | **0.65**   | -            | 7178        |
+
+*Table: FER CNN model classification results*
 
 #### MobileNet-FER13
 The base architecture of MobileNet was used with pre-trained weights from ImageNet. The model was trained on the [cleaned version of the FER2013 dataset](https://www.kaggle.com/datasets/gauravsharma99/fer13-cleaned-dataset), which removed inconsistencies and included five emotion classes: 'Angry, Fear, Happy, Disgust, and Neutral'.
 
 Model trained using `MobileNet-FER13.ipynb`.
 
+##### Results
+![mobilenet](https://github.com/user-attachments/assets/4eb8a3af-a34a-47a8-a0a2-4d7d58b97d96)
+
+| **Class**   | **Precision** | **Recall** | **F1-Score** | **Support** |
+|-------------|---------------|------------|--------------|-------------|
+| Angry       | 0.60          | 0.64       | 0.62         | 283         |
+| Fear        | 0.66          | 0.47       | 0.55         | 253         |
+| Happy       | 0.89          | 0.87       | 0.88         | 684         |
+| Neutral     | 0.65          | 0.76       | 0.70         | 430         |
+| **Macro Avg**   | 0.70          | 0.68       | 0.69         | -           |
+| **Weighted Avg**| 0.74          | 0.74       | 0.74         | -           |
+| **Accuracy**    | -             | **0.74**   | -            | 1650        |
+
+*Table: MobileNet-FER13 model classification results*
+
+
 ### Text Emotion Recognition
 #### LSTM-GoEmotions
 For text emotion recognition, a Long Short-Term Memory (LSTM) model was chosen due to its ability to capture long-range dependencies in sequential data like text, while remaining computationally efficient compared to more complex models like BERT. The model was trained using the [GoEmotions dataset](https://www.kaggle.com/datasets/debarshichanda/goemotions).
 
 Model trained using `TER_LSTM.ipynb`.
+
+##### Results
+
+| **Class**      | **Precision** | **Recall** | **F1-Score** | **Support** |
+|----------------|---------------|------------|--------------|-------------|
+| 0 (Anger)      | 0.44          | 0.33       | 0.38         | 703         |
+| 1 (Disgust)    | 0.94          | 0.94       | 0.94         | 2049        |
+| 2 (Fear)       | 0.00          | 0.00       | 0.00         | 90          |
+| 3 (Happy)      | 0.71          | 0.80       | 0.75         | 2049        |
+| 4 (Sad)        | 0.60          | 0.37       | 0.45         | 317         |
+| 5 (Surprise)   | 0.00          | 0.00       | 0.00         | 573         |
+| 6 (Neutral)    | 0.48          | 0.69       | 0.57         | 1605        |
+| **Macro Avg**      | 0.45          | 0.45       | 0.44         | -           |
+| **Weighted Avg**   | 0.63          | 0.68       | 0.65         | -           |
+| **Accuracy**       | -             | **0.68**   | -            | 7386        |
+
+*Table: LSTM model classification results on GoEmotions dataset*
+
 
 ## Pre-Trained Models
 
