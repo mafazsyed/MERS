@@ -29,11 +29,12 @@ While each model showed promising accuracy, further work is needed for underrepr
 
 ## Repository Structure
 - **/src**: Source code for FER, TER, and rPPG models.
-- **/models**: Pre-trained model weights for FER, TER, and rPPG (FER CNN, MobileNetFER13, and LSTM for TER).
-- **/docs**: Project documentation, including system design, model architecture, and evaluation.
+- **/model_weights**: Pre-trained model weights for FER, TER, and rPPG (FER CNN, MobileNetFER13, and LSTM for TER).
 - **/emotion_analysis**: Scripts for emotional analysis performed via logged transcriptions and emotions, with examples.
 - **/notebooks**: Jupyter notebooks for model training and testing.
 - **/robot_integration**: Scripts for deploying emotion recognition on the JD Humanoid Robot for real-time, personalized feedback.
+- **/results**: Training progress, confusion matrices, and video results on samples.
+- **/docs**: Project documentation, including system design, model architecture, and evaluation. *(Not included yet)*
 
 ## Training Models
 Each developed model can be trained individually using the notebooks in `/notebooks`:
