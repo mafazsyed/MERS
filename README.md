@@ -15,12 +15,12 @@ This thesis introduces a **Multimodal Emotion Recognition System (MERS)** for hu
 While each model showed promising accuracy, further work is needed for underrepresented emotion classes and expanded dataset validation. Future development can enhance MERS's applicability in healthcare, education, and social robotics, potentially transforming human-robot interaction in real-time applications.
 
 ## Project Structure
-/src # Source code for FER, TER, and rPPG models.
-/models # Pre-trained model weights for FER, TER, and rPPG (FER CNN, MobileNetFER13, and LSTM for TER).
-/docs # Project documentation, including system design, model architecture, and evaluation.
-/emotion_analysis # Scripts for emotional analysis performed via logged transcriptions and emotions, with examples.
-/notebooks # Jupyter notebooks for model training and testing.
-/robot_integration # Scripts for deploying emotion recognition on the JD Humanoid Robot for real-time, personalized feedback.
+- **/src**: Source code for FER, TER, and rPPG models.
+- **/models**: Pre-trained model weights for FER, TER, and rPPG (FER CNN, MobileNetFER13, and LSTM for TER).
+- **/docs**: Project documentation, including system design, model architecture, and evaluation.
+- **/emotion_analysis**: Scripts for emotional analysis performed via logged transcriptions and emotions, with examples.
+- **/notebooks**: Jupyter notebooks for model training and testing.
+- **/robot_integration**: Scripts for deploying emotion recognition on the JD Humanoid Robot for real-time, personalized feedback.
 
 ## Usage
 
