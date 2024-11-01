@@ -21,9 +21,9 @@ This project develops an emotion recognition system that leverages facial expres
 ### Key Contributions
 - **Facial Emotion Recognition (FER)**: Using CNN and MobileNetFER13 models trained on the FER2013 dataset.
 - **Text Emotion Recognition (TER)**: An LSTM-based model trained on GoEmotions for nuanced text emotion analysis.
-- **Text Sentiment Analysis Integration**: Facilitates dynamic feedback in the JD Humanoid Robot based on detected user emotions.
+- **Text Sentiment Analysis Integration**: Facilitates dynamic feedback in the JD Humanoid Robot based on detected user emotions, speech input, and robot's visual information.
 - **Multimodal Emotion Recognition System (MERS)**: Aggregation of facial, text, and speech recognition via a late fusion model to enable real-time, contactless emotion monitoring with emotion logging, visualisation, and analysis.
-- **Remote Photoplethysmography (rPPG)**: An Eulerian Video Magnification-based model estimates heart rate in a contactless manner.
+- **Heart Rate Detection**: An enhanced Eulerian Video Magnification-based model estimates heart rate in a contactless manner.
 
 While each model showed promising accuracy, further work is needed for underrepresented emotion classes and expanded dataset validation. Future development can enhance MERS's applicability in healthcare, education, and social robotics, potentially transforming human-robot interaction in real-time applications.
 
