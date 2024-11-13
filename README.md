@@ -5,7 +5,7 @@ This repository contains the code and resources developed as part of the thesis 
 ## Abstract
 This project develops an emotion recognition system that leverages facial expressions, speech inputs, and textual content alongside remotely detecting physiological indicators like heart rate through contactless facial camera footage. Through the development, training, and testing of Facial Emotion Recognition (FER) models and Text Emotion Recognition (TER) techniques using established datasets, the project seeks to enhance and compare the accuracy and generalization capabilities of these models. Part of the emotion recognition system is integrated into the JD Humanoid Robot to demonstrate its practical applications in enhancing human-robot interaction.
 
-### Video Preview
+### Video Preview (click image)
 <div style="display: flex; justify-content: space-around;">
 
   <a href="https://mafazsyed.com/wp-content/uploads/2024/10/MERS-FER-Interstellar-Scene.mp4">
